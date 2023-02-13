@@ -26,24 +26,23 @@ function addToCarritoItem(e){
 
 
 function addItemCarrito(newItem){
-    const InputElemnto = table.getElementsByClassName('contadorProductos')
+   
+    const InputElemnto = table.getElementsByClassName('contador')
     for(let i =0; i < carrito.length ; i++){
         if(carrito[i].title.trim() === newItem.title.trim()){
           carrito[i].cantidad ++;
           const inputValue = InputElemnto[i]
-          CarritoTotal()
           inputValue.value++;
-          
+          CarritoTotal()
           return null;
           
         }
        
       }
-     
   carrito.push(newItem) 
- 
   renderCarrito()
 
+  alert("Producto Agregado")
  
 } 
 
@@ -58,9 +57,10 @@ function renderCarrito(){
     <td><img src=${item.img}  class="w-40" alt="producto"></td>
     <td class="title"> ${item.title}</td>
     <td><center> $ ${item.precio}</center></td>
-    <td> <input type="number" min="1" value=${item.cantidad} class="contador"/></td>
+    <td> <input type="number" min="1" value="${item.cantidad}" class="contador"/></td>
     <td></td>
-    <td> <button class="bg-yellow-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded delete"> Eliminar</button></td>
+    <td> <button class="bg-yellow-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded delete"> Eliminar</button>
+    
   </tr>  
     `
     tr.innerHTML = Content;
@@ -76,12 +76,15 @@ function renderCarrito(){
 
 function CarritoTotal(){
     let Total = 0;
+    
     const itemCartTotal = document.querySelector('.total')
     carrito.forEach((item) => {
       Total += item.precio*item.cantidad
     })
   
     itemCartTotal.innerHTML = `Total $ ${Total}`
+    addLocalStorage();
+
 }
 
 function removeItemCarrito(e){
@@ -95,8 +98,11 @@ function removeItemCarrito(e){
       }
       
     }
+ 
+
     tr.remove()
     CarritoTotal()
+    alert('Producto eliminado')
   
 }
 
@@ -104,16 +110,27 @@ function sumaCantidad(e){
     const sumaInput  = e.target
     const tr = sumaInput.closest(".ItemCarrito")
     const title = tr.querySelector('.title').textContent;
-    carrito.forEach(item => {
+    carrito.forEach((item) => {
       if(item.title.trim() === title){
-        sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+        
         item.cantidad = sumaInput.value;
-        CarritoTotal()
+        CarritoTotal();
       }
     })
+    console.log(carrito)
   }
 
 
+  function addLocalStorage(){
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+  }
+  
+  window.onload = function(){
+    const storage = JSON.parse(localStorage.getItem('carrito'));
+    if(storage){
+      carrito = storage;
+      renderCarrito()
+    }
+  }
 
-//STORAGE
 
