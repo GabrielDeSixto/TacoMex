@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charet="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🥙 TacoMex</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../scss/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" class="logo">🥙Taco<span>MEX🐉</span></a>
+    <ul class="navbar">
+      <li>
+        <a href="../index.html"><i class='bx bxs-home-alt-2'></i> Inicio</a>
+      </li>
+      <li><a href="./menu.html"><i class='bx bxs-food-menu'></i> Menu</a></li>
+      <li><a href="./contacto.html"><i class='bx bx-support'></i> Contacto</a></li>
+      <li><a href="./historia.html"><i class='bx bx-history'></i> Historia</a></li>
+    </ul>
+    <div>
+      <div class="h-icons">
+        <a href="./compras.html" class="navbar"><i class="bx bx-shopping-bag"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="home-text">
+    <div>
+      <h1 class="text-center font-bold">Se parte de nuestra Franquicia 😉</h1>
+
+      <form class="bg-yellow-100 p-6 rounded-lg shadow-md">
+        <div class="mb-6">
+          <label for="name" class="block text-gray-700 font-medium mb-2">Nombre:</label>
+          <input type="text" class="border rounded-md border-gray-400 p-2 w-full" name="nombre" id="nombre" />
+          <label for="telefono" class="block text-gray-700 font-medium mb-2">Telefono:</label>
+          <input type="number" class="border rounded-md border-gray-400 p-2 w-full" name="telefono id=" telefono">
+          <label for="" class="block text-gray-700 font-medium mb-2">Email:</label>
+          <input type="email" class="border  rounded-md border-gray-400 p-2 w-full" name="correo" id="correo" />
+          <label for="" class="block text-gray-700 font-medium mb-2">Mensaje:</label>
+          <textarea name="mensaje" class="border  rounded-md border-gray-400 p-2 w-full" id="mensaje" cols="20"
+            rows="5"></textarea>
+          <input type="submit" class="bg-yellow-500 text-white p-2 rounded hover:bg-green-600" value="Enviar" />
+          <input type="reset" class="bg-yellow-500 text-white p-2 rounded hover:bg-red-600" value="Limpiar" />
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <h2 class="text-center font-bold text-xl">
+        Necesitas un servico para un evento de XV,
+        Casamiento,Comuniones,entre otros Contactanos 😋
+      </h2>
+
+      <form class="bg-yellow-100 p-6 rounded-lg shadow-md">
+        <div class="mb-6">
+          <label for="nameEvento" class="block text-gray-700 font-medium mb-2">Nombre del evento:</label>
+          <input type="text" name="nombreEvento" id="nombreEvento"
+            class="border rounded-md border-gray-400 p-2 w-full" />
+          <input type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" id=""
+            class="" name="evento" value="XV" />
+          <label for="XV" class="">XV</label>
+          <input type="radio" id="Boda" name="evento" value="Boda"
+            class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+          <label for="XV">Boda</label>
+          <input type="radio" id="Comuniones" name="evento" value="Comuniones"
+            class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+          <label for="XV">Comuniones</label>
+          <input type="radio" id="otro" name="evento" value="otro"
+            class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+          <label for="XV">otro</label>
+          <label for="Fecha_Evento" class="block text-gray-700 font-medium mb-2">Fecha del Evento:</label>
+          <input type="date" name="Fecha_Evento" id="telefono" class="border rounded-md border-gray-400 p-2 w-full" />
+          <label for="nAsistentes" class="block text-gray-700 font-medium mb-2">Número de Asistentes</label>
+          <input type="number" min="1" required class="border rounded-md border-gray-400 p-2 w-full" />
+          <label for="telefonoContacto" class="block text-gray-700 font-medium mb-2">Telefono de contacto</label>
+          <input type="tel" placeholder="2451053130" class="border rounded-md border-gray-400 p-2 w-full" />
+          <label for="" class="text" class="block text-gray-700 font-medium mb-2">Email de contacto:</label>
+          <input type="email" name="correo" id="correo" class="border rounded-md border-gray-400 p-2 w-full" />
+          <label for="" class=" text-gray-700 font-medium mb-2">Mensaje:</label>
+          <textarea name="mensaje" id="mensaje" cols="20" rows="5"
+            class="border rounded-md border-gray-400 p-2 w-full"></textarea>
+          <input type="submit" class="bg-yellow-500 text-white p-2 rounded hover:bg-green-600" value="Enviar" />
+          <input type="reset" class="bg-yellow-500 text-white p-2 rounded hover:bg-red-600" value="Limpiar" />
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p class="copyright"><b>🐍 &copy CORPYRIGHT TACOMEX 2020 - 2023 🐍</b></p>
+  </footer>
+</body>
+
+</html>

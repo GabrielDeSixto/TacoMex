@@ -1,0 +1,14 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/*================= VARIABLES ===============*/
+:root {
+  --text-color: #302e29;
+  --main-color: #ff9100;
+  --second-color: #1f1515;
+  --bg-color: #faeedf;
+  --big-font: 4.5rem;
+  --h2-font: 2.6rem;
+  --p-font: 1.1rem;
+}
+
+/*# sourceMappingURL=variables.css.map */
