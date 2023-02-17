@@ -1,51 +1,3 @@
-
-/*
-const listaT = document.querySelector('#listaTacos')
-fetch('../js/productostacos.json')
-    .then((res) => res.json())
-    .then((data)=>{
-        data.forEach((producto)=>{
-            const div = document.createElement('div');
-            div.innerHTML =`
-            <div class="grid-container" id="contenedor">
-                <div class="element-3 Title caja">${producto.nombre}
-                    <img src="${producto.img}" alt="producto" class="imagen Imgproducto" />
-                        <p class="precio"> ${producto.precio} pesos c/u</p>
-                        <button  class="button button-36" role="button" id="${producto.id}">
-                            Agregar al Carrito
-                        </button>
-                </div>
-            </div>
-            `
-            listaT.append(div);
-            
-        })
-
-        
-    })
-*/
-function agregarproducto(){
-const listaP = document.querySelector('#pizzas')
-    fetch('../js/pizzas.json')
-        .then((res) => res.json())
-        .then((data)=>{
-            data.forEach((producto)=>{
-                const div = document.createElement('div');
-                div.innerHTML =`
-                <div class="grid-container">
-                    <div class="element-3 Title caja" >${producto.nombre}
-                        <img src="${producto.img}" alt="producto" class="imagen Imgproducto" />
-                            <p class="precio"> ${producto.precio} pesos c/u</p>
-                            <button  class="button button-36" role="button" id="${producto.id}">
-                                Agregar al Carrito
-                            </button>
-                        </div>
-                </div>
-                `
-                listaP.append(div);
-            })
-        })
-    
 const listaH = document.querySelector('#hamburguer')
         fetch('../js/cangreburguer.json')
             .then((res) => res.json())
@@ -58,7 +10,7 @@ const listaH = document.querySelector('#hamburguer')
                             <img src="${producto.img}" alt="producto" class="imagen Imgproducto" />
                                 <p class="precio"> ${producto.precio} pesos c/u</p>
                                 <button  class="button button-36" role="button" id="${producto.id}">
-                                    Agregar al Carrito
+                                  Producto no disponible
                                 </button>
                             </div>
                     </div>
@@ -66,42 +18,10 @@ const listaH = document.querySelector('#hamburguer')
                     listaH.append(div);
                 })
             })
-}
-/*
+
+
 /// CARRITO DE COMPRAS
-const Clickbutton = document.querySelectorAll('.button');
-const tbody = document.querySelector('.tbody');
-let carrito = [];
-
-Clickbutton.forEach(btn => {
-  btn.addEventListener('click', () => console.log(btn))
-});
-
-// Función que muestra los productos del carrito
-const actualizarCarrito = () => {
-    tituloCarritoContenido.innerHTML =
-    `
-    <h5>Producto</h5>
-    <h5>Cantidad</h5>
-    <h5>Precio</h5>
-    <h5>Subtotal</h5>
-    `
-    carritoContenido.innerHTML = "";
-    carrito.forEach(articulo => {
-      const div = document.createElement("div");
-      div.classList.add("tableroProductosEnCarrito");
-      div.innerHTML =
-        `
-        <p >${articulo.nombre}</p>
-        <p >${articulo.piezas}</p>
-        <p >${articulo.precio}</p>
-        <p >${articulo.subtotal}</p>
-      `
-      carritoContenido.appendChild(div);
-    });
-  }; */
-
-  const Clickbutton = document.querySelectorAll('.button')
+const Clickbutton = document.querySelectorAll('.button')
 const table = document.querySelector('.tbody')
 let carrito = []
 
