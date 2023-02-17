@@ -1,0 +1,20 @@
+[
+  {
+    "id":1,
+    "nombre":"Tacos al pastor",
+    "img":"../img/Tacos_Pastor.jpg",
+    "precio":15
+  },
+  {
+    "id":2,
+    "nombre":"Tacos de carne asada",
+    "img":"../img/Tacos_Asada.jpg",
+    "precio":10
+  },
+  {
+    "id":3,
+    "nombre":"Tacos Dorados",
+    "img":"../img/Tacos_Dorados.jpg",
+    "precio":5
+  }
+]

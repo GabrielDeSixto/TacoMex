@@ -1,199 +1,64 @@
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import './variables.scss';
 @import './body.scss';
 @import './navbar.scss';
 
-  .h-icons {
-    margin-top: 9px;
-    margin-right: 100px;
-    font-size: 40px;
-    font-weight: bold;
-    justify-content: center;
+.textmain{
+    background-image: linear-gradient(#D3CCE3,#E9E4F0);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 35% right 0;
+    padding: 0 78px;
     display: flex;
-    padding: 12px 12px;
-    background: var(--main-color);
-    border-radius: 0.5rem;
-    
-  }
-  
- 
-
-  .h-icons {
-    font-size: 30px;
-    color: var(--bg-color);
-    margin-right: 10px;
-    margin-left: 10px;
-  
-    &.h-icons .h-icons:hover {
-      background-color: #1E9600;
-    }
-
-    &.h-icons:hover{
-      background-color: #1E9600;
-    }
-  }
-
-  #menu-icon {
-    font-size: 32px;
-    color: var(--bg-color);
-    z-index: 100;
-    cursor: pointer;
-    display: none;
-  }
-  
-  section {
-    padding: 90px 15% 80px;
-  }
-  .home{
-    height: 88vh;
-    width:100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: right;
-    gap: 2rem;
-  }
-  
-  .home-img img{
-    width: 100%;
-    height: auto;
-  }
-  .home-img{
-    width: 100%;
-    height: auto;
-    
-  }
-  
-  .imagenprincipal{
-    margin-left: 150px;
-    margin-top: 100px;
-    border-radius: 30px;
-  }
-  
-  .home-text h1{
-    margin-top: 100px;
-    font-size: var(--h2-font);
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-  }
-  
-  
-  .home-text p{
-    font-size: var(--p-font);
-  }
-  
-  .home-text p{
-    font-size: var(--p-font);
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+
+.textmain h2{
+    font-weight: bold;
+    font-size:400%;
+    padding-bottom: 15px;
+}
+
+.textmain h1{
+    font-size: 400%;
+    color: $bg-color;
+}
+
+.textmain button{
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px ;
+    color: #cadee3;
+    background-color:#2C5364;
+    border: 100px;
+    background-repeat: no-repeat;
+    font-weight: 700;
+    font-size: 16px;
+}
+.textmain p{
+    font-size: 200%;
     font-weight:500;
-    color: var(--second-color);
-    line-height: 32px;
-    margin-bottom: 2.3rem;
-  }
-  
-  .ubicacion{
-    text-align: center;
-  }
-  
-  .title{
-    margin-left: 350px;
-    font-weight: bold;
-  
-  }
+}
 
-  @mixin border-radius($radius) {
-    border-radius: $radius;
-  }
-  
-  .btn{
-    text-align: center;
-    justify-content: center;
-    display:auto;
-    padding: 14px 26px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    font-size: 15px;
-    font-weight: 600;
-    @include border-radius(0.5rem);
-    transition: all .40s ease;
-  }
-  
-  .btn:hover{
-    background-color: #1E9600;
-  
-  }
-   
-  /*Pages Story*/
-  
-  .container{
-    display: flex;
-  }
-  .parrafoJuan{
-    margin-top: 50px;
-    text-align: justify;
-    width: 90%;
-  }
-  
-  .imgMainJuan{
-    margin-top: 50px;
+.textmain button:hover{
+    background-color: #6C5B7B;
+}
+
+.textmain img{
+    margin-left: 800px;
     border-radius: 20px;
-    width: 100%;
-  }
-  
-  .parrafoCharro{
-    margin-top: 60px;
-    padding-left: 50px;
-    text-align: justify;
-    width: 100%;
-  }
-  
-  .imgMainCharro{
-    margin-top: 100px;
-    border-radius: 20px;
-    width: 100%;
-  }
-  
-  .parrafoCoco{
-    margin-top: 50px;
-    margin-left:-50px;
-    padding-left: 40px;
-    text-align: justify;
-    width: 100%;
-  }
-  
-  .imgMainCoco{
-    margin-top: 150px;
-    border-radius: 20px;
-    width: auto;
-    height: auto;
-  }
-  
-  .contactanos{
-    margin-top: 50px;
-    text-align: center;
-    margin-left: 280px;
-    font-weight: bold;
-  }
-  
-  .dragon{
-    margin-left: 150px;
-    width: 25%;
-  }
-  
-  .btnhistoria{
-    margin-left: 350px;
-    display:auto;
-    padding: 14px 26px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    font-size: 15px;
-    font-weight: 600;
-    border-radius:  0.5rem;
-    transition: all .40s ease;
-  }
-  
-  .btnhistoria:hover{
-    background-color: #1E9600;
-  
-  }
-  
+    width: 500px;
+    position: absolute;
+}
+@import './historia.scss';
+@import './menu.scss';
+@import './contacto.scss';
 @import './footer.scss'; 

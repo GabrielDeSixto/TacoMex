@@ -4,13 +4,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
+    font-family: "League Spartan", sans-serif;
+   
   }
 
-  body {
-    background-color: var(--bg-color);
-    color: var(--textcolor);
-  }
+
+@mixin fontlinecolor($font, $line,){
+  font-size: $font;
+  line-height: $line;
+  color: #222;
+}
+h1{
+ @include fontlinecolor(45px,60px);
+}
+
+h2{
+ @include fontlinecolor(40px,50px);
+}
+
+h4{
+  @include fontlinecolor(20px,15px);
+}

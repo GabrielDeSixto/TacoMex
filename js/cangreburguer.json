@@ -1,0 +1,20 @@
+[
+    {
+      "id":7,
+      "nombre":"Doble Carne",
+      "img":"../img/HDobleCarne.jpg",
+      "precio":20
+    },
+    {
+      "id":8,
+      "nombre":"Clasica",
+      "img":"../img/Hclasica.jpg",
+      "precio":15
+    },
+    {
+      "id":9,
+      "nombre":"Especial",
+      "img":"../img/Especial.jpg",
+      "precio":30
+    }
+]

@@ -1,6 +1,7 @@
-footer {
+.footer {
+  background: #e3e6f3;
+  justify-content: center;
   text-align: center;
-  padding: 40px;
 }
 
 /*# sourceMappingURL=footer.css.map */

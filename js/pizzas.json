@@ -1,0 +1,20 @@
+[
+    {
+      "id":4,
+      "nombre":"Pizza",
+      "img":"../img/Pperoni.jpg",
+      "precio":20
+    },
+    {
+      "id":5,
+      "nombre":"Pizza rellena de queso",
+      "img":"../img/Prqueso.jpg",
+      "precio":10
+    },
+    {
+      "id":6,
+      "nombre":"Hawaiana",
+      "img":"../img/Phawai.jpg",
+      "precio":15
+    }
+]

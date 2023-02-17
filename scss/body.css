@@ -1,29 +1,26 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-/*================= VARIABLES ===============*/
-:root {
-  --text-color: #302e29;
-  --main-color: #ff9100;
-  --second-color: #1f1515;
-  --bg-color: #faeedf;
-  --big-font: 4.5rem;
-  --h2-font: 2.6rem;
-  --p-font: 1.1rem;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
+  font-family: "League Spartan", sans-serif;
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--textcolor);
+h1 {
+  font-size: 45px;
+  line-height: 60px;
+  color: #222;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 15px;
+  color: #222;
 }
 
 /*# sourceMappingURL=body.css.map */

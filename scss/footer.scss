@@ -1,4 +1,6 @@
-footer{
+@import './variables.scss';
+.footer{
+    background: $main-color;
+    justify-content: center;
     text-align: center;
-    padding:40px;
-  }
+}
