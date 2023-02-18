@@ -6,7 +6,8 @@ const listaH = document.querySelector('#hamburguer')
                     const div = document.createElement('div');
                     div.innerHTML =`
                     <div class="grid-container tarjeta">
-                        <div class="element-3 Title caja">${producto.nombre}
+                        <div class="element-3 Title caja">
+                          <p class="Title">${producto.nombre}</p>
                             <img src="${producto.img}" alt="producto" class="imagen Imgproducto" />
                                 <p class="precio"> ${producto.precio} pesos c/u</p>
                                 <button  class="button button-36" role="button" id="${producto.id}">
@@ -27,7 +28,7 @@ let carrito = []
 
 Clickbutton.forEach(btn => {
   btn.addEventListener('click', addToCarritoItem)
-})
+});
 
 
 function addToCarritoItem(e){
@@ -50,11 +51,11 @@ function addToCarritoItem(e){
 
 function addItemCarrito(newItem){
    
-    const InputElemnto = table.getElementsByClassName('contador')
-    for(let i =0; i < carrito.length ; i++){
-        if(carrito[i].title.trim() === newItem.title.trim()){
+    const InputElemento = table.getElementsByClassName('contador')
+    for(let i =0; i < carrito.length; i++){
+        if(carrito[i].title.trim() == newItem.title.trim()){
           carrito[i].cantidad ++;
-          const inputValue = InputElemnto[i]
+          const inputValue = InputElemento[i]
           inputValue.value++;
           CarritoTotal()
           return null;
@@ -62,44 +63,43 @@ function addItemCarrito(newItem){
         }
        
       }
-  carrito.push(newItem) 
-  renderCarrito()
 
-  alert("Producto Agregado")
+    carrito.push(newItem) 
+
+    renderCarrito()
+
+    alert("Producto Agregado")
  
 } 
 
 
 function renderCarrito(){
-  table.innerHTML = ''
+  table.innerHTML = '';
   carrito.map(item => {
     const tr = document.createElement('tr')
     tr.classList.add('ItemCarrito')
-    const Content = `
+    tr.innerHTML =`
     <tr>
     <td><img src=${item.img}  class="w-40" alt="producto"></td>
     <td class="title"> ${item.title}</td>
     <td><center> $ ${item.precio}</center></td>
     <td> <input type="number" min="1" value="${item.cantidad}" class="contador"/></td>
     <td></td>
-    <td> <button class="bg-yellow-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded delete"> Eliminar</button>
+    <td> <button class="button-36 delete"> Eliminar</button>
     
   </tr>  
-    `
-    tr.innerHTML = Content;
+    `;
     table.append(tr);
 
     tr.querySelector('.delete').addEventListener('click',  removeItemCarrito);
-    tr.querySelector(".contador").addEventListener('change', sumaCantidad);
-
+    tr.querySelector(".contador").addEventListener('change', sumaCantidad)
    
   })
-
+  CarritoTotal();
 }
 
 function CarritoTotal(){
     let Total = 0;
-    
     const itemCartTotal = document.querySelector('.total')
     carrito.forEach((item) => {
       Total += item.precio*item.cantidad
@@ -121,8 +121,6 @@ function removeItemCarrito(e){
       }
       
     }
- 
-
     tr.remove()
     CarritoTotal()
     alert('Producto eliminado')
@@ -130,19 +128,20 @@ function removeItemCarrito(e){
 }
 
 function sumaCantidad(e){
-    const sumaInput  = e.target
-    const tr = sumaInput.closest(".ItemCarrito")
-    const title = tr.querySelector('.title').textContent;
-    carrito.forEach((item) => {
-      if(item.title.trim() === title){
-        
-        item.cantidad = sumaInput.value;
-        CarritoTotal();
-      }
-    })
-    console.log(carrito)
-  }
+  const sumaInput  = e.target
+  const tr = sumaInput.closest(".contador")
+  const title = tr.querySelector('.title').textContent;
+  carrito.forEach(item => {
+    if(item.title.trim() === title){
+      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+      item.cantidad += sumaInput.value;
+      CarritoTotal()
+    }
+  })
+}
 
+
+  //añadir al local storage
 
   function addLocalStorage(){
     localStorage.setItem('carrito', JSON.stringify(carrito))
