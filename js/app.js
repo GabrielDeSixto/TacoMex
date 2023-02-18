@@ -124,24 +124,27 @@ function removeItemCarrito(e){
     tr.remove()
     CarritoTotal()
     alert('Producto eliminado')
+    
   
 }
 
-function sumaCantidad(e){
-  const sumaInput  = e.target
-  const tr = sumaInput.closest(".contador")
+function sumaCantidad(e) {
+  const sumaInput = e.target;
+  const tr = sumaInput.closest(".ItemCarrito");
   const title = tr.querySelector('.title').textContent;
   carrito.forEach(item => {
-    if(item.title.trim() === title){
-      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
-      item.cantidad += sumaInput.value;
-      CarritoTotal()
+    if (item.title.trim() == title) {
+      sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
+      item.cantidad = sumaInput.value;
+      CarritoTotal();
+      console.log(carrito);
     }
-  })
+  });
 }
 
 
-  //añadir al local storage
+
+//añadir al local storage
 
   function addLocalStorage(){
     localStorage.setItem('carrito', JSON.stringify(carrito))
